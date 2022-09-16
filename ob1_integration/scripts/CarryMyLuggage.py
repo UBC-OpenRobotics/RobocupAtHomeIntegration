@@ -20,7 +20,7 @@ class CarryLuggageRobot(Robot):
         rospy.wait_for_service('relative_location_service')
         self.follow_server = rospy.ServiceProxy("named_location_service", RelativeLocation)
 
-        self.named_map_locations = json.load(open(ob1nav.NAMED_LOCATIONS_FILE))
+        self.named_map_locations = json.load(open(nav.NAMED_LOCATIONS_FILE))
         
 
     def save_speech(self, msg):
